@@ -54,7 +54,7 @@ def status(server,cert):
 
 def main():
     ap=argparse.ArgumentParser()
-    ap.add_argument("--server",default="127.0.0.1")
+    ap.add_argument("--server",default=load_server_ip())
     ap.add_argument("--count",type=int,default=20)
     ap.add_argument("--interval",type=float,default=1.0)
     ap.add_argument("--status",action="store_true")
